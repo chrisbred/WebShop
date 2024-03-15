@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        /* CSS-stiler forblir uendret */
+    </style>
+    <title>Produktside</title>
+</head>
+<body>
+    <header>
+        <h1>Produktinformasjon</h1>
+    </header>
+
+    <div class="product-details">
+        <img src="../Bilder/lenovo.webp" width="250" height="200" alt="lenovo">
+        <h2>IdeaPad Slim 3 14i</h2>
+        <p>12th Generation Intel® Core™ i5, Windows 11 Home</p>
+        <p>Pris per enhet: 6 419 kr</p>
+
+        <form action="/handle_kjop" method="post" id="purchaseForm">
+            <label for="quantity">Antall:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1">
+            <p>Total pris: <span id="totalPrice">6 419 kr</span></p>
+            <button type="submit">Kjøp</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nettbutikk</p>
+    </footer>
+
+    <script>
+        document.getElementById('quantity').addEventListener('input', function() {
+            // Hent antall enheter fra input-elementet
+            var quantity = parseInt(this.value);
+
+            // Hent prisen per enhet
+            var unitPrice = 6419; // Sett prisen per enhet her
+
+            // Beregn totalprisen
+            var totalPrice = quantity * unitPrice;
+
+            // Oppdater totalprisen på siden
+            document.getElementById('totalPrice').innerText = totalPrice.toLocaleString('nb-NO') + ' kr';
+        });
+    </script>
+</body>
+</html>

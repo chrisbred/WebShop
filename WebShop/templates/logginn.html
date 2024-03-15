@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/logginn.css">
+    <title>Tekhub</title>
+</head>
+<body>
+    <div class="main"> 
+        <h1>Logg Inn</h1> 
+        <form action="/login" method="POST"> <!-- Form starts here -->
+            <label for="first"> 
+                Brukernavn: 
+            </label> 
+            <input type="text" 
+                   id="first"
+                   name="first" 
+                   placeholder="Skriv inn brukernavn" required> 
+  
+            <label for="password"> 
+                Passord: 
+            </label> 
+            <input type="password"
+                   id="password" 
+                   name="password" 
+                   placeholder="Skriv inn passord" required> 
+  
+            <div class="wrap"> 
+                <button type="submit"> <!-- Submit button -->
+                    Send 
+                </button> 
+            </div> 
+        </form> <!-- Form ends here -->
+    </div> 
+</body>
+</html>
